@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "eternalnether:withered_bone_meal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_withered_bone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "eternalnether:withered_bone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_withered_bone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "eternalnether:withered_bone_meal"
+    ]
+  }
+}

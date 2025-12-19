@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "eternalnether:block/withered_blackstone_slab"
+    },
+    "type=double": {
+      "model": "eternalnether:block/withered_blackstone"
+    },
+    "type=top": {
+      "model": "eternalnether:block/withered_blackstone_slab_top"
+    }
+  }
+}

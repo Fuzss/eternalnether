@@ -1,0 +1,13 @@
+{
+  "values": [
+    {
+      "id": "#incendium:ash_barrens",
+      "required": false
+    },
+    "minecraft:crimson_forest",
+    {
+      "id": "#byg:crimson_gardens",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "eternalnether:catacomb/wither_skeleton",
+  "fallback": "eternalnether:catacomb/wither_skeleton",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "feature": "eternalnether:mob_feature_wither_skeleton",
+        "projection": "rigid",
+        "element_type": "minecraft:feature_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "parent": "eternalnether:citadel",
+  "criteria": {
+    "summon_enderman": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "eternalnether:warped_enderman"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:summoned_entity"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.eternalnether.summon_enderman.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:ender_pearl"
+    },
+    "title": {
+      "translate": "advancements.eternalnether.summon_enderman.title"
+    }
+  },
+  "requirements": [
+    [
+      "summon_enderman"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "withered_bone_meal",
+  "ingredients": [
+    "eternalnether:withered_bone"
+  ],
+  "result": {
+    "count": 3,
+    "id": "eternalnether:withered_bone_meal"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "eternalnether:catacomb/catacomb_mobs",
+  "fallback": "eternalnether:catacomb/catacomb_mobs",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "feature": "eternalnether:mob_feature_catacomb",
+        "projection": "rigid",
+        "element_type": "minecraft:feature_pool_element"
+      }
+    }
+  ]
+}

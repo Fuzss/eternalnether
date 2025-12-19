@@ -1,0 +1,101 @@
+{
+  "entity.warped_enderman.ambient": {
+    "sounds": [
+      "eternalnether:entity/warped_enderman/idle1",
+      "eternalnether:entity/warped_enderman/idle2",
+      "eternalnether:entity/warped_enderman/idle3",
+      "eternalnether:entity/warped_enderman/idle4",
+      "eternalnether:entity/warped_enderman/idle5"
+    ],
+    "subtitle": "subtitles.entity.warped_enderman.ambient"
+  },
+  "entity.warped_enderman.death": {
+    "sounds": [
+      "eternalnether:entity/warped_enderman/death"
+    ],
+    "subtitle": "subtitles.entity.warped_enderman.death"
+  },
+  "entity.warped_enderman.hurt": {
+    "sounds": [
+      "eternalnether:entity/warped_enderman/hit1",
+      "eternalnether:entity/warped_enderman/hit2",
+      "eternalnether:entity/warped_enderman/hit3",
+      "eternalnether:entity/warped_enderman/hit4"
+    ],
+    "subtitle": "subtitles.entity.warped_enderman.hurt"
+  },
+  "entity.warped_enderman.scream": {
+    "sounds": [
+      "eternalnether:entity/warped_enderman/scream1",
+      "eternalnether:entity/warped_enderman/scream2",
+      "eternalnether:entity/warped_enderman/scream3",
+      "eternalnether:entity/warped_enderman/scream4"
+    ],
+    "subtitle": "subtitles.entity.warped_enderman.scream"
+  },
+  "entity.warped_enderman.stare": {
+    "sounds": [
+      "eternalnether:entity/warped_enderman/stare"
+    ],
+    "subtitle": "subtitles.entity.warped_enderman.stare"
+  },
+  "entity.warped_enderman.teleport": {
+    "sounds": [
+      "eternalnether:entity/warped_enderman/portal1",
+      "eternalnether:entity/warped_enderman/portal2"
+    ],
+    "subtitle": "subtitles.entity.warped_enderman.teleport"
+  },
+  "entity.wex.ambient": {
+    "sounds": [
+      "eternalnether:entity/wex/idle1",
+      "eternalnether:entity/wex/idle2",
+      "eternalnether:entity/wex/idle3",
+      "eternalnether:entity/wex/idle4"
+    ],
+    "subtitle": "subtitles.entity.wex.ambient"
+  },
+  "entity.wex.charge": {
+    "sounds": [
+      "eternalnether:entity/wex/charge1",
+      "eternalnether:entity/wex/charge2",
+      "eternalnether:entity/wex/charge3"
+    ],
+    "subtitle": "subtitles.entity.wex.charge"
+  },
+  "entity.wex.death": {
+    "sounds": [
+      "eternalnether:entity/wex/death1",
+      "eternalnether:entity/wex/death2"
+    ],
+    "subtitle": "subtitles.entity.wex.death"
+  },
+  "entity.wex.hurt": {
+    "sounds": [
+      "eternalnether:entity/wex/hurt1",
+      "eternalnether:entity/wex/hurt2"
+    ],
+    "subtitle": "subtitles.entity.wex.hurt"
+  },
+  "item.sword.block": {
+    "sounds": [
+      {
+        "name": "eternalnether:item/sword/block1",
+        "volume": 0.8
+      },
+      {
+        "name": "eternalnether:item/sword/block2",
+        "volume": 0.8
+      }
+    ],
+    "subtitle": "subtitles.item.sword.block"
+  },
+  "wither_waltz": {
+    "sounds": [
+      {
+        "name": "eternalnether:records/wither_waltz",
+        "stream": true
+      }
+    ]
+  }
+}

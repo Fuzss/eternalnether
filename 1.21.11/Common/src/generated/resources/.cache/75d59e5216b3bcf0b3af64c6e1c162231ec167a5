@@ -1,0 +1,4 @@
+// 1.21.10	2025-10-09T00:54:47.600086	Tags for minecraft:worldgen/biome mod id vanilla
+29803ce6676dd34dd6d24cd9b6d81bb4f52e1764 data/eternalnether/tags/worldgen/biome/has_structure/catacomb.json
+70ff0693954fec635aba294e44a319d61fbd164e data/eternalnether/tags/worldgen/biome/has_structure/citadel.json
+fa2e17cf673dfab1430afdfad801416fe78a604c data/eternalnether/tags/worldgen/biome/has_structure/piglin_manor.json

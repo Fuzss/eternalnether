@@ -1,0 +1,32 @@
+accessWidener   v2  named
+accessible  method  net/minecraft/world/entity/monster/piglin/PiglinBruteAi setAngerTarget  (Lnet/minecraft/world/entity/monster/piglin/PiglinBrute;Lnet/minecraft/world/entity/LivingEntity;)V
+accessible  field   net/minecraft/world/level/levelgen/feature/BasaltColumnsFeature CANNOT_PLACE_ON Lcom/google/common/collect/ImmutableList;
+mutable field   net/minecraft/world/level/levelgen/feature/BasaltColumnsFeature CANNOT_PLACE_ON Lcom/google/common/collect/ImmutableList;
+accessible  field   net/minecraft/world/level/levelgen/feature/DeltaFeature CANNOT_REPLACE  Lcom/google/common/collect/ImmutableList;
+mutable field   net/minecraft/world/level/levelgen/feature/DeltaFeature CANNOT_REPLACE  Lcom/google/common/collect/ImmutableList;
+accessible  field   net/minecraft/world/entity/monster/piglin/PiglinBrute   SENSOR_TYPES    Lcom/google/common/collect/ImmutableList;
+mutable field   net/minecraft/world/entity/monster/piglin/PiglinBrute   SENSOR_TYPES    Lcom/google/common/collect/ImmutableList;
+accessible  field   net/minecraft/world/entity/monster/piglin/PiglinBrute   MEMORY_TYPES    Lcom/google/common/collect/ImmutableList;
+mutable field   net/minecraft/world/entity/monster/piglin/PiglinBrute   MEMORY_TYPES    Lcom/google/common/collect/ImmutableList;
+accessible  method  net/minecraft/client/renderer/ItemInHandRenderer    applyItemArmTransform   (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/entity/HumanoidArm;F)V
+accessible  field   net/minecraft/world/level/block/entity/BellBlockEntity  DURATION    I
+accessible  field   net/minecraft/world/level/block/entity/BellBlockEntity  MAX_RESONATION_TICKS    I
+accessible  field   net/minecraft/world/level/block/entity/BellBlockEntity  TICKS_BEFORE_RESONATION I
+accessible  field   net/minecraft/world/level/block/entity/BellBlockEntity  SEARCH_RADIUS   I
+accessible  field   net/minecraft/world/level/block/entity/BellBlockEntity  HEAR_BELL_RADIUS    I
+accessible  field   net/minecraft/world/level/block/entity/BellBlockEntity  nearbyEntities  Ljava/util/List;
+accessible  field   net/minecraft/world/level/block/entity/BellBlockEntity  resonating  Z
+accessible  field   net/minecraft/world/level/block/entity/BellBlockEntity  resonationTicks I
+accessible  field   net/minecraft/world/entity/Mob  target  Lnet/minecraft/world/entity/LivingEntity;
+accessible  method  net/minecraft/world/entity/ai/behavior/MeleeAttack  isHoldingUsableProjectileWeapon (Lnet/minecraft/world/entity/Mob;)Z
+extendable  class   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure
+accessible  field   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure startPool   Lnet/minecraft/core/Holder;
+accessible  field   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure startJigsawName Ljava/util/Optional;
+accessible  field   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure maxDepth    I
+accessible  field   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure startHeight Lnet/minecraft/world/level/levelgen/heightproviders/HeightProvider;
+accessible  field   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure useExpansionHack    Z
+accessible  field   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure projectStartToHeightmap Ljava/util/Optional;
+accessible  field   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure maxDistanceFromCenter   Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure$MaxDistance;
+accessible  field   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure poolAliases Ljava/util/List;
+accessible  field   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure dimensionPadding    Lnet/minecraft/world/level/levelgen/structure/pools/DimensionPadding;
+accessible  field   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure liquidSettings  Lnet/minecraft/world/level/levelgen/structure/templatesystem/LiquidSettings;

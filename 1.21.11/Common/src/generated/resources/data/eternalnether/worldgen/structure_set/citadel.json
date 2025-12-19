@@ -1,0 +1,18 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "exclusion_zone": {
+      "chunk_count": 4,
+      "other_set": "minecraft:nether_complexes"
+    },
+    "salt": 1621815507,
+    "separation": 4,
+    "spacing": 12
+  },
+  "structures": [
+    {
+      "structure": "eternalnether:citadel",
+      "weight": 1
+    }
+  ]
+}

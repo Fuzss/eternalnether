@@ -1,0 +1,11 @@
+// 1.21.10	2025-10-09T00:54:47.602203	Tags for minecraft:item mod id vanilla
+c20bf0c5ca6aeba9e35157008b5ac4909afeb04b data/c/tags/item/bones.json
+10bf49f311f9ab522b0de34d2124de618044bdc8 data/c/tags/item/fertilizers.json
+7a6c12d91fd02b9e0d01b94706b31ae7b5571401 data/c/tags/item/music_discs.json
+e9202feeed05063e3be7e9a78489bcf885f39e0d data/c/tags/item/tools/melee_weapon.json
+10b5f8e2ba3113c0ca7e904d6f6d709ac598dde5 data/c/tags/item/tools/shield.json
+e1e00a5ad82d7d37aaf2464dc1a94a90a9fb3738 data/eternalnether/tags/item/piglin_brute_safe_armor.json
+10b5f8e2ba3113c0ca7e904d6f6d709ac598dde5 data/minecraft/tags/item/enchantable/durability.json
+7bd5de111d88901413fd646381fb1f4af6c09c4e data/minecraft/tags/item/stone_crafting_materials.json
+7bd5de111d88901413fd646381fb1f4af6c09c4e data/minecraft/tags/item/stone_tool_materials.json
+e9202feeed05063e3be7e9a78489bcf885f39e0d data/minecraft/tags/item/swords.json

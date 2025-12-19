@@ -1,0 +1,14 @@
+{
+  "name": "eternalnether:piglin_manor/strider",
+  "fallback": "eternalnether:piglin_manor/strider",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "feature": "eternalnether:mob_feature_strider",
+        "projection": "rigid",
+        "element_type": "minecraft:feature_pool_element"
+      }
+    }
+  ]
+}

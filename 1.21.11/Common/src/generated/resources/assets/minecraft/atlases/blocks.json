@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:single",
+      "resource": "eternalnether:entity/bell/netherite_bell_body"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "eternalnether:warped_nether_brick_slab",
+  "result": {
+    "count": 1,
+    "id": "eternalnether:chiseled_warped_nether_bricks"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "eternalnether:catacomb/left_head",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "eternalnether:catacomb/left_small_skull",
+        "processors": "eternalnether:catacomb/catacomb_skull",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

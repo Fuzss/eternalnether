@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "eternalnether:block/cracked_withered_blackstone"
+  }
+}

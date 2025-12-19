@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "entered_nether": {
+      "conditions": {
+        "to": "minecraft:the_nether"
+      },
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "display": {
+    "background": "eternalnether:textures/block/soul_stone.png",
+    "description": {
+      "translate": "advancements.eternalnether.root.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "eternalnether:chiseled_withered_blackstone"
+    },
+    "title": {
+      "translate": "advancements.eternalnether.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "entered_nether"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

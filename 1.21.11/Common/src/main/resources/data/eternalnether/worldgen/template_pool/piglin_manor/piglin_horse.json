@@ -1,0 +1,14 @@
+{
+  "name": "eternalnether:piglin_manor/piglin_horse",
+  "fallback": "eternalnether:piglin_manor/piglin_horse",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "feature": "eternalnether:mob_feature_piglin_manor_outside",
+        "projection": "rigid",
+        "element_type": "minecraft:feature_pool_element"
+      }
+    }
+  ]
+}

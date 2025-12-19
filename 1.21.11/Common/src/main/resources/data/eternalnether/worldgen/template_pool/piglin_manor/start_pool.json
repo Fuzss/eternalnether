@@ -1,0 +1,24 @@
+{
+  "name": "eternalnether:piglin_manor/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "location": "eternalnether:piglin_manor/piglin_manor_1",
+        "processors": "eternalnether:piglin_manor/piglin_manor",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "eternalnether:piglin_manor/piglin_manor_2",
+        "processors": "eternalnether:piglin_manor/piglin_manor",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

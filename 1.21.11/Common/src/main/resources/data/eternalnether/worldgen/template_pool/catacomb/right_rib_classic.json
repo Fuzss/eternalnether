@@ -1,0 +1,33 @@
+{
+  "name": "eternalnether:catacomb/right_rib",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "location": "eternalnether:catacomb/right_rib_treasure",
+        "processors": "eternalnether:catacomb/withered_blackstone",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "eternalnether:catacomb/right_rib_prison",
+        "processors": "eternalnether:catacomb/withered_blackstone",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "eternalnether:catacomb/right_rib_portal",
+        "processors": "eternalnether:catacomb/withered_blackstone",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

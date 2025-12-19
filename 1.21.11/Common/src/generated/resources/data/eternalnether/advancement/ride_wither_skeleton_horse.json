@@ -1,0 +1,42 @@
+{
+  "parent": "eternalnether:piglin_manor",
+  "criteria": {
+    "ride_wither_skeleton_horse": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "vehicle": {
+                "type": "eternalnether:wither_skeleton_horse",
+                "passenger": {
+                  "type": "minecraft:player"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:started_riding"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.eternalnether.ride_wither_skeleton_horse.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:saddle"
+    },
+    "title": {
+      "translate": "advancements.eternalnether.ride_wither_skeleton_horse.title"
+    }
+  },
+  "requirements": [
+    [
+      "ride_wither_skeleton_horse"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

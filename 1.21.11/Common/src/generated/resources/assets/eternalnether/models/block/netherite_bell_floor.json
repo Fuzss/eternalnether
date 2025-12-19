@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/bell_floor",
+  "textures": {
+    "bar": "minecraft:block/crimson_planks",
+    "particle": "eternalnether:block/netherite_bell_bottom",
+    "post": "minecraft:block/blackstone"
+  }
+}

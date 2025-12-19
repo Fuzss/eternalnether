@@ -1,0 +1,18 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "exclusion_zone": {
+      "chunk_count": 6,
+      "other_set": "minecraft:nether_complexes"
+    },
+    "salt": 292421824,
+    "separation": 4,
+    "spacing": 12
+  },
+  "structures": [
+    {
+      "structure": "eternalnether:piglin_manor",
+      "weight": 1
+    }
+  ]
+}

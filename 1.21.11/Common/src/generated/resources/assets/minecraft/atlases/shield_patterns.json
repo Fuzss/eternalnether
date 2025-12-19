@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:single",
+      "resource": "eternalnether:entity/gilded_netherite_shield_base"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "eternalnether:entity/gilded_netherite_shield_base_nopattern"
+    }
+  ]
+}

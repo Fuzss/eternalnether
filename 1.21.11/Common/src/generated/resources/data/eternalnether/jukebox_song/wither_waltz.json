@@ -1,0 +1,8 @@
+{
+  "comparator_output": 4,
+  "description": {
+    "translate": "jukebox_song.eternalnether.wither_waltz"
+  },
+  "length_in_seconds": 5040.0,
+  "sound_event": "eternalnether:wither_waltz"
+}

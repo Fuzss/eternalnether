@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "N": "minecraft:nether_brick",
+    "W": "minecraft:warped_roots"
+  },
+  "pattern": [
+    "NW",
+    "WN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "eternalnether:warped_nether_bricks"
+  }
+}

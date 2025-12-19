@@ -1,0 +1,39 @@
+{
+  "parent": "eternalnether:explore_structures",
+  "criteria": {
+    "in_piglin_manor": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "eternalnether:piglin_manor"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.eternalnether.piglin_manor.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:crimson_planks"
+    },
+    "title": {
+      "translate": "advancements.eternalnether.piglin_manor.title"
+    }
+  },
+  "requirements": [
+    [
+      "in_piglin_manor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
