@@ -9,13 +9,13 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.PiglinRenderer;
 import net.minecraft.client.renderer.entity.state.PiglinRenderState;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.monster.piglin.AbstractPiglin;
 import net.minecraft.world.item.ItemStack;
 
 public class PiglinHunterRenderer extends PiglinRenderer {
-    private static final ResourceLocation TEXTURE_LOCATION = EternalNether.id("textures/entity/piglin/piglin_hunter.png");
+    private static final Identifier TEXTURE_LOCATION = EternalNether.id("textures/entity/piglin/piglin_hunter.png");
 
     public PiglinHunterRenderer(EntityRendererProvider.Context context) {
         super(context,
@@ -27,7 +27,7 @@ public class PiglinHunterRenderer extends PiglinRenderer {
     }
 
     @Override
-    public ResourceLocation getTextureLocation(PiglinRenderState renderState) {
+    public Identifier getTextureLocation(PiglinRenderState renderState) {
         return TEXTURE_LOCATION;
     }
 

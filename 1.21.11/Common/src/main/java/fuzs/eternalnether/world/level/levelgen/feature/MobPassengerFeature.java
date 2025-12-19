@@ -8,7 +8,7 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.Nullable;
 
 public class MobPassengerFeature extends Feature<NoneFeatureConfiguration> {
     private final Holder<? extends EntityType<? extends Mob>> passengerEntityType;

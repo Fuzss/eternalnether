@@ -5,18 +5,19 @@ import fuzs.eternalnether.EternalNether;
 import fuzs.eternalnether.client.model.geom.ModModelLayers;
 import fuzs.eternalnether.client.renderer.entity.state.WraitherRenderState;
 import fuzs.eternalnether.world.entity.monster.Wraither;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.AbstractSkeletonRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.layers.EyesLayer;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
+import net.minecraft.resources.Identifier;
 
 public class WraitherRenderer extends AbstractSkeletonRenderer<Wraither, WraitherRenderState> {
-    private static final ResourceLocation TEXTURE_LOCATION = EternalNether.id("textures/entity/skeleton/wraither.png");
-    private static final ResourceLocation POSSESSED_TEXTURE_LOCATION = EternalNether.id(
+    private static final Identifier TEXTURE_LOCATION = EternalNether.id("textures/entity/skeleton/wraither.png");
+    private static final Identifier POSSESSED_TEXTURE_LOCATION = EternalNether.id(
             "textures/entity/skeleton/wraither_possessed.png");
-    private static final RenderType EYES_RENDER_TYPE = RenderType.eyes(EternalNether.id(
+    private static final RenderType EYES_RENDER_TYPE = RenderTypes.eyes(EternalNether.id(
             "textures/entity/skeleton/wraither_eyes.png"));
 
     public WraitherRenderer(EntityRendererProvider.Context context) {
@@ -37,7 +38,7 @@ public class WraitherRenderer extends AbstractSkeletonRenderer<Wraither, Wraithe
     }
 
     @Override
-    public ResourceLocation getTextureLocation(WraitherRenderState renderState) {
+    public Identifier getTextureLocation(WraitherRenderState renderState) {
         return renderState.isPossessed ? POSSESSED_TEXTURE_LOCATION : TEXTURE_LOCATION;
     }
 

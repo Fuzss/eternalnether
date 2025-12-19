@@ -2,7 +2,7 @@ package fuzs.eternalnether.world.entity.monster;
 
 import fuzs.eternalnether.EternalNether;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
@@ -10,7 +10,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 
 public interface ShieldedMob {
-    ResourceLocation SPEED_MODIFIER_BLOCKING_ID = EternalNether.id("blocking");
+    Identifier SPEED_MODIFIER_BLOCKING_ID = EternalNether.id("blocking");
     AttributeModifier SPEED_MODIFIER_BLOCKING = new AttributeModifier(SPEED_MODIFIER_BLOCKING_ID,
             -0.10,
             AttributeModifier.Operation.ADD_VALUE);

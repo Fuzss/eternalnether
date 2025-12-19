@@ -2,13 +2,13 @@ package fuzs.eternalnether.client.model;
 
 import fuzs.eternalnether.client.renderer.entity.state.WexRenderState;
 import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.client.model.SkeletonModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.CubeListBuilder;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
+import net.minecraft.client.model.monster.skeleton.SkeletonModel;
 import net.minecraft.util.Mth;
 
 /**
@@ -46,14 +46,15 @@ public class WexModel extends HumanoidModel<WexRenderState> {
     public void setupAnim(WexRenderState renderState) {
         super.setupAnim(renderState);
         if (renderState.isCharging) {
-            if (renderState.getMainHandItem().isEmpty()) {
+            if (renderState.getMainHandItemState().isEmpty()) {
                 this.rightArm.xRot = Mth.PI * 1.5F;
                 this.leftArm.xRot = Mth.PI * 1.5F;
             } else {
-                if (!renderState.rightHandItem.isEmpty()) {
+                if (!renderState.rightHandItemState.isEmpty()) {
                     this.rightArm.xRot = Mth.PI * 1.2F;
                 }
-                if (!renderState.leftHandItem.isEmpty()) {
+
+                if (!renderState.leftHandItemState.isEmpty()) {
                     this.leftArm.xRot = Mth.PI * 1.2F;
                 }
             }

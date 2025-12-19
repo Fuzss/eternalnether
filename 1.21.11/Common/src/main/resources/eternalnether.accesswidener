@@ -18,7 +18,7 @@ accessible  field   net/minecraft/world/level/block/entity/BellBlockEntity  near
 accessible  field   net/minecraft/world/level/block/entity/BellBlockEntity  resonating  Z
 accessible  field   net/minecraft/world/level/block/entity/BellBlockEntity  resonationTicks I
 accessible  field   net/minecraft/world/entity/Mob  target  Lnet/minecraft/world/entity/LivingEntity;
-accessible  method  net/minecraft/world/entity/ai/behavior/MeleeAttack  isHoldingUsableProjectileWeapon (Lnet/minecraft/world/entity/Mob;)Z
+accessible  method  net/minecraft/world/entity/ai/behavior/MeleeAttack  isHoldingUsableNonMeleeWeapon   (Lnet/minecraft/world/entity/Mob;)Z
 extendable  class   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure
 accessible  field   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure startPool   Lnet/minecraft/core/Holder;
 accessible  field   net/minecraft/world/level/levelgen/structure/structures/JigsawStructure startJigsawName Ljava/util/Optional;

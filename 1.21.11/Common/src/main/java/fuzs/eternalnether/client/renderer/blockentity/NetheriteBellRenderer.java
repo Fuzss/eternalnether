@@ -3,12 +3,13 @@ package fuzs.eternalnether.client.renderer.blockentity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import fuzs.eternalnether.EternalNether;
 import fuzs.eternalnether.client.model.geom.ModModelLayers;
-import net.minecraft.client.model.BellModel;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.model.object.bell.BellModel;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BellRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.blockentity.state.BellRenderState;
+import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.state.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.renderer.texture.TextureAtlas;
@@ -36,7 +37,7 @@ public class NetheriteBellRenderer extends BellRenderer {
         // use custom model and material
         BellModel.State state = new BellModel.State(renderState.ticks, renderState.shakeDirection);
         this.model.setupAnim(state);
-        RenderType renderType = NETHERITE_BELL_MATERIAL.renderType(RenderType::entitySolid);
+        RenderType renderType = NETHERITE_BELL_MATERIAL.renderType(RenderTypes::entitySolid);
         nodeCollector.submitModel(this.model,
                 state,
                 poseStack,
@@ -44,7 +45,7 @@ public class NetheriteBellRenderer extends BellRenderer {
                 renderState.lightCoords,
                 OverlayTexture.NO_OVERLAY,
                 -1,
-                this.materials.get(BELL_RESOURCE_LOCATION),
+                this.materials.get(BELL_TEXTURE),
                 0,
                 renderState.breakProgress);
     }

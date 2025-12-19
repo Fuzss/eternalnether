@@ -11,7 +11,7 @@ import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.monster.piglin.PiglinBrute;
 import net.minecraft.world.entity.monster.piglin.PiglinBruteAi;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.GameRules;
+import net.minecraft.world.level.gamerules.GameRules;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -24,9 +24,7 @@ import java.util.List;
 @Mixin(PiglinAi.class)
 abstract class PiglinAiMixin {
 
-    @Inject(
-            method = "angerNearbyPiglins", at = @At(value = "TAIL")
-    )
+    @Inject(method = "angerNearbyPiglins", at = @At(value = "TAIL"))
     private static void angerNearbyPiglins(ServerLevel serverLevel, Player player, boolean angerOnlyIfCanSee, CallbackInfo callback) {
         List<PiglinBrute> list = serverLevel.getEntitiesOfClass(PiglinBrute.class,
                 player.getBoundingBox().inflate(16.0));
@@ -34,7 +32,7 @@ abstract class PiglinAiMixin {
                 .filter(PiglinAiMixin::isIdle)
                 .filter((PiglinBrute piglinBrute) -> !angerOnlyIfCanSee || BehaviorUtils.canSee(piglinBrute, player))
                 .forEach((PiglinBrute piglinBrute) -> {
-                    if (serverLevel.getGameRules().getBoolean(GameRules.RULE_UNIVERSAL_ANGER)) {
+                    if (serverLevel.getGameRules().get(GameRules.UNIVERSAL_ANGER)) {
                         ModPiglinBruteAi.setAngerTargetToNearestTargetablePlayerIfFound(piglinBrute, player);
                     } else {
                         PiglinBruteAi.setAngerTarget(piglinBrute, player);
@@ -47,11 +45,7 @@ abstract class PiglinAiMixin {
         throw new RuntimeException();
     }
 
-    @Inject(
-            method = "isWearingSafeArmor", at = @At(
-            value = "HEAD"
-    ), cancellable = true
-    )
+    @Inject(method = "isWearingSafeArmor", at = @At(value = "HEAD"), cancellable = true)
     private static void isWearingSafeArmor(LivingEntity livingEntity, CallbackInfoReturnable<Boolean> callback) {
         for (EquipmentSlot equipmentSlot : EquipmentSlotGroup.ARMOR) {
             if (ModPiglinBruteAi.makesPiglinsNeutral(livingEntity.getItemBySlot(equipmentSlot))) {

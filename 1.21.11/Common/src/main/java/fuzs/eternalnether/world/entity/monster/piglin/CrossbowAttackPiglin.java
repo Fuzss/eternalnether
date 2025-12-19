@@ -14,10 +14,13 @@ import net.minecraft.world.entity.ai.goal.RangedCrossbowAttackGoal;
 import net.minecraft.world.entity.monster.CrossbowAttackMob;
 import net.minecraft.world.entity.monster.piglin.AbstractPiglin;
 import net.minecraft.world.entity.monster.piglin.PiglinArmPose;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.CrossbowItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
-import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.Nullable;
 
 public abstract class CrossbowAttackPiglin extends GoalBasedPiglin implements CrossbowAttackMob {
     private static final EntityDataAccessor<Boolean> DATA_IS_CHARGING_CROSSBOW = SynchedEntityData.defineId(
@@ -41,12 +44,12 @@ public abstract class CrossbowAttackPiglin extends GoalBasedPiglin implements Cr
         this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.0, false) {
             @Override
             public boolean canUse() {
-                return !MeleeAttack.isHoldingUsableProjectileWeapon(this.mob) && super.canUse();
+                return !MeleeAttack.isHoldingUsableNonMeleeWeapon(this.mob) && super.canUse();
             }
 
             @Override
             public boolean canContinueToUse() {
-                return !MeleeAttack.isHoldingUsableProjectileWeapon(this.mob) && super.canContinueToUse();
+                return !MeleeAttack.isHoldingUsableNonMeleeWeapon(this.mob) && super.canContinueToUse();
             }
 
             @Override
@@ -132,7 +135,7 @@ public abstract class CrossbowAttackPiglin extends GoalBasedPiglin implements Cr
     }
 
     @Override
-    public boolean canFireProjectileWeapon(ProjectileWeaponItem projectileWeapon) {
-        return projectileWeapon == Items.CROSSBOW;
+    public boolean canUseNonMeleeWeapon(ItemStack itemStack) {
+        return itemStack.getItem() instanceof CrossbowItem;
     }
 }

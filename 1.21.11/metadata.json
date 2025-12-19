@@ -1,0 +1,62 @@
+{
+    "mod": {
+        "id": "eternalnether",
+        "group": "fuzs.eternalnether",
+        "name": "Eternal Nether",
+        "version": "21.11.0",
+        "authors": [
+            "Izofar",
+            "Fuzs"
+        ],
+        "description": "New structures, mobs, and many Nether adventures await! A continuation of Bygone Nether by Izofar.",
+        "license": "MIT"
+    },
+    "dependencies": [
+        {
+            "name": "fabricapi",
+            "type": "required",
+            "platforms": [
+                "fabric"
+            ]
+        },
+        {
+            "name": "forgeconfigapiport",
+            "type": "required",
+            "platforms": [
+                "fabric"
+            ]
+        },
+        {
+            "name": "puzzleslib",
+            "type": "required",
+            "platforms": [
+                "fabric",
+                "neoforge"
+            ]
+        }
+    ],
+    "links": [
+        {
+            "name": "github",
+            "slug": "eternalnether"
+        },
+        {
+            "name": "curseforge",
+            "slug": "eternal-nether",
+            "id": "1252482"
+        },
+        {
+            "name": "modrinth",
+            "slug": "eternal-nether",
+            "id": "s6R4jmL8"
+        }
+    ],
+    "environments": {
+        "client": "required",
+        "server": "required"
+    },
+    "platforms": [
+        "fabric",
+        "neoforge"
+    ]
+}

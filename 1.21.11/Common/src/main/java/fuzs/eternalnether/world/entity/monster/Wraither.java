@@ -7,7 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
@@ -18,9 +18,9 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.monster.Evoker;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.monster.WitherSkeleton;
+import net.minecraft.world.entity.monster.illager.Evoker;
+import net.minecraft.world.entity.monster.skeleton.WitherSkeleton;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.storage.ValueInput;
@@ -30,7 +30,7 @@ import net.minecraft.world.scores.PlayerTeam;
 public class Wraither extends WitherSkeleton {
     private static final EntityDataAccessor<Boolean> DATA_IS_POSSESSED = SynchedEntityData.defineId(Wraither.class,
             EntityDataSerializers.BOOLEAN);
-    private static final ResourceLocation SPEED_MODIFIER_DISPOSSESSED_ID = EternalNether.id("dispossessed");
+    private static final Identifier SPEED_MODIFIER_DISPOSSESSED_ID = EternalNether.id("dispossessed");
     private static final AttributeModifier SPEED_MODIFIER_DISPOSSESSED = new AttributeModifier(
             SPEED_MODIFIER_DISPOSSESSED_ID,
             0.1,

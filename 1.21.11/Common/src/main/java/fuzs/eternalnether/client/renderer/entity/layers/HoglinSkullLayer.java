@@ -3,23 +3,23 @@ package fuzs.eternalnether.client.renderer.entity.layers;
 import com.mojang.blaze3d.vertex.PoseStack;
 import fuzs.eternalnether.EternalNether;
 import fuzs.eternalnether.client.model.geom.ModModelLayers;
-import net.minecraft.client.model.HoglinModel;
 import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.client.model.PiglinModel;
-import net.minecraft.client.model.PlayerCapeModel;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.model.monster.hoglin.HoglinModel;
+import net.minecraft.client.model.monster.piglin.PiglinModel;
+import net.minecraft.client.model.player.PlayerCapeModel;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.client.renderer.entity.state.PiglinRenderState;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.resources.model.EquipmentAssetManager;
 import net.minecraft.client.resources.model.EquipmentClientInfo;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.equipment.Equippable;
@@ -27,7 +27,7 @@ import net.minecraft.world.item.equipment.Equippable;
 import java.util.Collections;
 
 public class HoglinSkullLayer extends RenderLayer<PiglinRenderState, PiglinModel> {
-    private static final ResourceLocation SKULL_TEXTURE_LOCATION = EternalNether.id(
+    private static final Identifier SKULL_TEXTURE_LOCATION = EternalNether.id(
             "textures/entity/piglin/piglin_hunter_skull.png");
 
     private final HumanoidModel<PiglinRenderState> model;
@@ -87,7 +87,7 @@ public class HoglinSkullLayer extends RenderLayer<PiglinRenderState, PiglinModel
             nodeCollector.submitModel(this.model,
                     renderState,
                     poseStack,
-                    RenderType.entitySolid(SKULL_TEXTURE_LOCATION),
+                    RenderTypes.entitySolid(SKULL_TEXTURE_LOCATION),
                     packedLight,
                     OverlayTexture.NO_OVERLAY,
                     renderState.outlineColor,

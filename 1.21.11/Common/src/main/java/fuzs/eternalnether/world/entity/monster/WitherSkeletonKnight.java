@@ -5,7 +5,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
@@ -19,7 +19,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.monster.WitherSkeleton;
+import net.minecraft.world.entity.monster.skeleton.WitherSkeleton;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -37,8 +37,7 @@ public class WitherSkeletonKnight extends WitherSkeleton implements ShieldedMob 
     private static final EntityDataAccessor<Boolean> DATA_IS_DISARMORED = SynchedEntityData.defineId(
             WitherSkeletonKnight.class,
             EntityDataSerializers.BOOLEAN);
-    private static final ResourceLocation SPEED_MODIFIER_DISARMOURED_ID = ResourceLocation.withDefaultNamespace(
-            "disarmoured");
+    private static final Identifier SPEED_MODIFIER_DISARMOURED_ID = Identifier.withDefaultNamespace("disarmoured");
     private static final AttributeModifier SPEED_MODIFIER_DISARMOURED = new AttributeModifier(
             SPEED_MODIFIER_DISARMOURED_ID,
             0.35F,

@@ -6,7 +6,6 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.ProjectileWeaponItem;
 
 public class ShieldDefenseGoal<M extends Mob & ShieldedMob, T extends LivingEntity> extends NearestAttackableTargetGoal<T> {
     private final M mob;
@@ -38,7 +37,7 @@ public class ShieldDefenseGoal<M extends Mob & ShieldedMob, T extends LivingEnti
 
     @Override
     public void tick() {
-        if (this.target != null && isUsingProjectileWeapon(this.target)) {
+        if (this.target != null && isUsingNonMeleeWeapon(this.target)) {
             if (this.shieldWarmupPeriod > 0) {
                 this.shieldWarmupPeriod--;
             } else {
@@ -58,16 +57,15 @@ public class ShieldDefenseGoal<M extends Mob & ShieldedMob, T extends LivingEnti
     @Override
     protected void findTarget() {
         super.findTarget();
-        if (this.target != null && !isUsingProjectileWeapon(this.target)) {
+        if (this.target != null && !isUsingNonMeleeWeapon(this.target)) {
             this.target = null;
         }
     }
 
-    private static boolean isUsingProjectileWeapon(LivingEntity livingEntity) {
+    private static boolean isUsingNonMeleeWeapon(LivingEntity livingEntity) {
         return livingEntity.isHolding((ItemStack itemStack) -> {
-            return (livingEntity.isUsingItem() || CrossbowItem.isCharged(itemStack))
-                    && itemStack.getItem() instanceof ProjectileWeaponItem projectileWeaponItem && (
-                    !(livingEntity instanceof Mob mob) || mob.canFireProjectileWeapon(projectileWeaponItem));
+            return (livingEntity.isUsingItem() || CrossbowItem.isCharged(itemStack)) && (
+                    !(livingEntity instanceof Mob mob) || mob.canUseNonMeleeWeapon(itemStack));
         });
     }
 }

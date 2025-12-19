@@ -5,10 +5,10 @@ import fuzs.eternalnether.client.model.geom.ModModelLayers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.PiglinRenderer;
 import net.minecraft.client.renderer.entity.state.PiglinRenderState;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public class PiglinPrisonerRenderer extends PiglinRenderer {
-    private static final ResourceLocation TEXTURE_LOCATION = EternalNether.id(
+    private static final Identifier TEXTURE_LOCATION = EternalNether.id(
             "textures/entity/piglin/piglin_prisoner.png");
 
     public PiglinPrisonerRenderer(EntityRendererProvider.Context context) {
@@ -20,7 +20,7 @@ public class PiglinPrisonerRenderer extends PiglinRenderer {
     }
 
     @Override
-    public ResourceLocation getTextureLocation(PiglinRenderState renderState) {
+    public Identifier getTextureLocation(PiglinRenderState renderState) {
         return TEXTURE_LOCATION;
     }
 }

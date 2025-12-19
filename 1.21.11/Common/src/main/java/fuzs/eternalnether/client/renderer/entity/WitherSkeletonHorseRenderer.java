@@ -2,17 +2,17 @@ package fuzs.eternalnether.client.renderer.entity;
 
 import fuzs.eternalnether.EternalNether;
 import fuzs.eternalnether.client.model.geom.ModModelLayers;
-import net.minecraft.client.model.AbstractEquineModel;
-import net.minecraft.client.model.EquineSaddleModel;
-import net.minecraft.client.model.HorseModel;
+import net.minecraft.client.model.animal.equine.AbstractEquineModel;
+import net.minecraft.client.model.animal.equine.EquineSaddleModel;
+import net.minecraft.client.model.animal.equine.HorseModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.AbstractHorseRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.layers.SimpleEquipmentLayer;
 import net.minecraft.client.renderer.entity.state.EquineRenderState;
 import net.minecraft.client.resources.model.EquipmentClientInfo;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.animal.horse.AbstractHorse;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.entity.animal.equine.AbstractHorse;
 
 public class WitherSkeletonHorseRenderer extends AbstractHorseRenderer<AbstractHorse, EquineRenderState, AbstractEquineModel<EquineRenderState>> {
     private static final Type WITHER_SKELETON_HORSE = new Type(EternalNether.id(
@@ -23,7 +23,7 @@ public class WitherSkeletonHorseRenderer extends AbstractHorseRenderer<AbstractH
             ModModelLayers.WITHER_SKELETON_HORSE_SADDLE,
             ModModelLayers.WITHER_SKELETON_HORSE_BABY_SADDLE);
 
-    private final ResourceLocation texture;
+    private final Identifier texture;
 
     public WitherSkeletonHorseRenderer(EntityRendererProvider.Context context) {
         this(context, WITHER_SKELETON_HORSE);
@@ -43,7 +43,7 @@ public class WitherSkeletonHorseRenderer extends AbstractHorseRenderer<AbstractH
     }
 
     @Override
-    public ResourceLocation getTextureLocation(EquineRenderState renderState) {
+    public Identifier getTextureLocation(EquineRenderState renderState) {
         return this.texture;
     }
 
@@ -52,7 +52,7 @@ public class WitherSkeletonHorseRenderer extends AbstractHorseRenderer<AbstractH
         return new EquineRenderState();
     }
 
-    public record Type(ResourceLocation texture,
+    public record Type(Identifier texture,
                        ModelLayerLocation model,
                        ModelLayerLocation babyModel,
                        EquipmentClientInfo.LayerType saddleLayer,

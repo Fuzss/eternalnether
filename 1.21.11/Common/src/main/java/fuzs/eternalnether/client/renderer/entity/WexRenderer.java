@@ -8,11 +8,11 @@ import fuzs.eternalnether.world.entity.monster.Wex;
 import net.minecraft.client.renderer.entity.EntityRendererProvider.Context;
 import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public class WexRenderer extends HumanoidMobRenderer<Wex, WexRenderState, WexModel> {
-    private static final ResourceLocation TEXTURE_LOCATION = EternalNether.id("textures/entity/skeleton/wex.png");
-    private static final ResourceLocation CHARGING_TEXTURE_LOCATION = EternalNether.id(
+    private static final Identifier TEXTURE_LOCATION = EternalNether.id("textures/entity/skeleton/wex.png");
+    private static final Identifier CHARGING_TEXTURE_LOCATION = EternalNether.id(
             "textures/entity/skeleton/wex_charging.png");
 
     public WexRenderer(Context context) {
@@ -36,7 +36,7 @@ public class WexRenderer extends HumanoidMobRenderer<Wex, WexRenderState, WexMod
     }
 
     @Override
-    public ResourceLocation getTextureLocation(WexRenderState renderState) {
+    public Identifier getTextureLocation(WexRenderState renderState) {
         return renderState.isCharging ? CHARGING_TEXTURE_LOCATION : TEXTURE_LOCATION;
     }
 }

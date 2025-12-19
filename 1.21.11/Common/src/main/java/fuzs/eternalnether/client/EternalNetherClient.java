@@ -14,12 +14,18 @@ import fuzs.puzzleslib.api.client.core.v1.context.BlockEntityRenderersContext;
 import fuzs.puzzleslib.api.client.core.v1.context.EntityRenderersContext;
 import fuzs.puzzleslib.api.client.core.v1.context.ItemModelsContext;
 import fuzs.puzzleslib.api.client.core.v1.context.LayerDefinitionsContext;
-import net.minecraft.client.model.*;
+import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.model.animal.equine.AbstractEquineModel;
+import net.minecraft.client.model.animal.equine.EquineSaddleModel;
 import net.minecraft.client.model.geom.LayerDefinitions;
 import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.MeshTransformer;
+import net.minecraft.client.model.monster.piglin.PiglinModel;
+import net.minecraft.client.model.monster.skeleton.SkeletonModel;
+import net.minecraft.client.model.object.bell.BellModel;
+import net.minecraft.client.model.object.equipment.ShieldModel;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 public class EternalNetherClient implements ClientModConstructor {
@@ -60,14 +66,14 @@ public class EternalNetherClient implements ClientModConstructor {
         context.registerLayerDefinition(ModModelLayers.CORPOR,
                 () -> CorporRenderer.createBodyLayer().apply(MeshTransformer.scaling(1.2F)));
         context.registerArmorDefinition(ModModelLayers.CORPOR_ARMOR,
-                HumanoidModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION,
+                () -> HumanoidModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION,
                                 LayerDefinitions.OUTER_ARMOR_DEFORMATION)
                         .map((MeshDefinition meshDefinition) -> LayerDefinition.create(meshDefinition, 64, 32)
                                 .apply(MeshTransformer.scaling(1.2F))));
         context.registerLayerDefinition(ModModelLayers.WRAITHER,
                 () -> SkeletonModel.createBodyLayer().apply(MeshTransformer.scaling(1.2F)));
         context.registerArmorDefinition(ModModelLayers.WRAITHER_ARMOR,
-                HumanoidModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION,
+                () -> HumanoidModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION,
                                 LayerDefinitions.OUTER_ARMOR_DEFORMATION)
                         .map((MeshDefinition meshDefinition) -> LayerDefinition.create(meshDefinition, 64, 32)
                                 .apply(MeshTransformer.scaling(1.2F))));
@@ -77,33 +83,37 @@ public class EternalNetherClient implements ClientModConstructor {
                 () -> LayerDefinition.create(HumanoidModel.createMesh(new CubeDeformation(0.25F), 0.0F), 64, 32)
                         .apply(MeshTransformer.scaling(1.2F)));
         context.registerArmorDefinition(ModModelLayers.WITHER_SKELETON_KNIGHT_ARMOR,
-                HumanoidModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION,
+                () -> HumanoidModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION,
                                 LayerDefinitions.OUTER_ARMOR_DEFORMATION)
                         .map((MeshDefinition meshDefinition) -> LayerDefinition.create(meshDefinition, 64, 32)
                                 .apply(MeshTransformer.scaling(1.2F))));
         context.registerLayerDefinition(ModModelLayers.PIGLIN_PRISONER,
                 () -> LayerDefinition.create(PiglinModel.createMesh(CubeDeformation.NONE), 64, 64));
         context.registerArmorDefinition(ModModelLayers.PIGLIN_PRISONER_ARMOR,
-                PiglinModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION, new CubeDeformation(1.02F))
+                () -> PiglinModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION,
+                                new CubeDeformation(1.02F))
                         .map((MeshDefinition meshDefinition) -> LayerDefinition.create(meshDefinition, 64, 32)));
         context.registerLayerDefinition(ModModelLayers.PIGLIN_PRISONER_BABY,
                 () -> LayerDefinition.create(PiglinModel.createMesh(CubeDeformation.NONE), 64, 64)
                         .apply(HumanoidModel.BABY_TRANSFORMER));
         context.registerArmorDefinition(ModModelLayers.PIGLIN_PRISONER_BABY_ARMOR,
-                PiglinModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION, new CubeDeformation(1.02F))
+                () -> PiglinModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION,
+                                new CubeDeformation(1.02F))
                         .map((MeshDefinition meshDefinition) -> LayerDefinition.create(meshDefinition, 64, 32)
                                 .apply(HumanoidModel.BABY_TRANSFORMER)));
         context.registerLayerDefinition(ModModelLayers.PIGLIN_HUNTER,
                 () -> LayerDefinition.create(PiglinModel.createMesh(CubeDeformation.NONE), 64, 64));
         context.registerLayerDefinition(ModModelLayers.PIGLIN_HUNTER_SKULL, HoglinSkullLayer::createSkullLayer);
         context.registerArmorDefinition(ModModelLayers.PIGLIN_HUNTER_ARMOR,
-                PiglinModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION, new CubeDeformation(1.02F))
+                () -> PiglinModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION,
+                                new CubeDeformation(1.02F))
                         .map((MeshDefinition meshDefinition) -> LayerDefinition.create(meshDefinition, 64, 32)));
         context.registerLayerDefinition(ModModelLayers.PIGLIN_HUNTER_BABY,
                 () -> LayerDefinition.create(PiglinModel.createMesh(CubeDeformation.NONE), 64, 64)
                         .apply(HumanoidModel.BABY_TRANSFORMER));
         context.registerArmorDefinition(ModModelLayers.PIGLIN_HUNTER_BABY_ARMOR,
-                PiglinModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION, new CubeDeformation(1.02F))
+                () -> PiglinModel.createArmorMeshSet(LayerDefinitions.INNER_ARMOR_DEFORMATION,
+                                new CubeDeformation(1.02F))
                         .map((MeshDefinition meshDefinition) -> LayerDefinition.create(meshDefinition, 64, 32)
                                 .apply(HumanoidModel.BABY_TRANSFORMER)));
         context.registerLayerDefinition(ModModelLayers.WITHER_SKELETON_HORSE,

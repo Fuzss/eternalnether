@@ -11,14 +11,14 @@ import net.minecraft.client.renderer.entity.AbstractSkeletonRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.layers.SkeletonClothingLayer;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.item.ItemStack;
 
 public class WitherSkeletonKnightRenderer extends AbstractSkeletonRenderer<WitherSkeletonKnight, WitherSkeletonKnightRenderState> {
-    private static final ResourceLocation TEXTURE_LOCATION = EternalNether.id(
+    private static final Identifier TEXTURE_LOCATION = EternalNether.id(
             "textures/entity/skeleton/wither_skeleton_knight.png");
-    private static final ResourceLocation OVERLAY_TEXTURE_LOCATION = EternalNether.id(
+    private static final Identifier OVERLAY_TEXTURE_LOCATION = EternalNether.id(
             "textures/entity/skeleton/wither_skeleton_knight_overlay.png");
 
     public WitherSkeletonKnightRenderer(EntityRendererProvider.Context context) {
@@ -42,7 +42,7 @@ public class WitherSkeletonKnightRenderer extends AbstractSkeletonRenderer<Withe
     }
 
     @Override
-    public ResourceLocation getTextureLocation(WitherSkeletonKnightRenderState renderState) {
+    public Identifier getTextureLocation(WitherSkeletonKnightRenderState renderState) {
         return TEXTURE_LOCATION;
     }
 

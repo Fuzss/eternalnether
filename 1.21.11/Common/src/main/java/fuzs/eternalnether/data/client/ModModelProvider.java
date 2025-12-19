@@ -8,7 +8,7 @@ import fuzs.puzzleslib.api.client.data.v2.AbstractModelProvider;
 import fuzs.puzzleslib.api.client.data.v2.models.ItemModelGenerationHelper;
 import fuzs.puzzleslib.api.client.data.v2.models.ModelLocationHelper;
 import fuzs.puzzleslib.api.client.data.v2.models.ModelTemplateHelper;
-import fuzs.puzzleslib.api.core.v1.utility.ResourceLocationHelper;
+import net.minecraft.resources.Identifier;
 import fuzs.puzzleslib.api.data.v2.core.DataProviderContext;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
@@ -18,7 +18,7 @@ import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.*;
 import net.minecraft.core.Direction;
 import net.minecraft.data.BlockFamily;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BellAttachType;
@@ -26,10 +26,10 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public class ModModelProvider extends AbstractModelProvider {
     public static final ModelTemplate SHIELD_MODEL_TEMPLATE = ModelTemplateHelper.createItemModelTemplate(
-            ResourceLocationHelper.withDefaultNamespace("shield"),
+            Identifier.withDefaultNamespace("shield"),
             TextureSlot.PARTICLE);
     public static final ModelTemplate SHIELD_BLOCKING_MODEL_TEMPLATE = ModelTemplateHelper.createItemModelTemplate(
-            ResourceLocationHelper.withDefaultNamespace("shield_blocking"),
+            Identifier.withDefaultNamespace("shield_blocking"),
             TextureSlot.PARTICLE);
     public static final TextureSlot BAR_TEXTURE_SLOT = TextureSlot.create("bar");
     public static final TextureSlot POST_TEXTURE_SLOT = TextureSlot.create("post");
@@ -116,16 +116,16 @@ public class ModModelProvider extends AbstractModelProvider {
      * @see BlockModelGenerators#createBell()
      */
     public final void createBell(Block block, TextureMapping textureMapping, BlockModelGenerators blockModelGenerators) {
-        ResourceLocation resourceLocation = BELL_FLOOR_MODEL_TEMPLATE.create(ModelLocationHelper.getBlockModel(block,
+        Identifier identifier = BELL_FLOOR_MODEL_TEMPLATE.create(ModelLocationHelper.getBlockModel(block,
                 "_floor"), textureMapping, blockModelGenerators.modelOutput);
-        ResourceLocation resourceLocation2 = BELL_CEILING_MODEL_TEMPLATE.create(ModelLocationHelper.getBlockModel(block,
+        Identifier resourceLocation2 = BELL_CEILING_MODEL_TEMPLATE.create(ModelLocationHelper.getBlockModel(block,
                 "_ceiling"), textureMapping, blockModelGenerators.modelOutput);
-        ResourceLocation resourceLocation3 = BELL_WALL_MODEL_TEMPLATE.create(ModelLocationHelper.getBlockModel(block,
+        Identifier resourceLocation3 = BELL_WALL_MODEL_TEMPLATE.create(ModelLocationHelper.getBlockModel(block,
                 "_wall"), textureMapping, blockModelGenerators.modelOutput);
-        ResourceLocation resourceLocation4 = BELL_BETWEEN_WALLS_MODEL_TEMPLATE.create(ModelLocationHelper.getBlockModel(
+        Identifier resourceLocation4 = BELL_BETWEEN_WALLS_MODEL_TEMPLATE.create(ModelLocationHelper.getBlockModel(
                 block,
                 "_between_walls"), textureMapping, blockModelGenerators.modelOutput);
-        MultiVariant multiVariant = BlockModelGenerators.plainVariant(resourceLocation);
+        MultiVariant multiVariant = BlockModelGenerators.plainVariant(identifier);
         MultiVariant multiVariant2 = BlockModelGenerators.plainVariant(resourceLocation2);
         MultiVariant multiVariant3 = BlockModelGenerators.plainVariant(resourceLocation3);
         MultiVariant multiVariant4 = BlockModelGenerators.plainVariant(resourceLocation4);

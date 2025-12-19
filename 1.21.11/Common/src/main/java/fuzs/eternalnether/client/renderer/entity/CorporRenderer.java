@@ -3,19 +3,19 @@ package fuzs.eternalnether.client.renderer.entity;
 import fuzs.eternalnether.EternalNether;
 import fuzs.eternalnether.client.model.geom.ModModelLayers;
 import fuzs.eternalnether.world.entity.monster.Corpor;
-import net.minecraft.client.model.SkeletonModel;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.CubeListBuilder;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
+import net.minecraft.client.model.monster.skeleton.SkeletonModel;
 import net.minecraft.client.renderer.entity.AbstractSkeletonRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.SkeletonRenderState;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public class CorporRenderer extends AbstractSkeletonRenderer<Corpor, SkeletonRenderState> {
-    private static final ResourceLocation TEXTURE_LOCATION = EternalNether.id("textures/entity/skeleton/corpor.png");
+    private static final Identifier TEXTURE_LOCATION = EternalNether.id("textures/entity/skeleton/corpor.png");
 
     public CorporRenderer(EntityRendererProvider.Context context) {
         super(context, ModModelLayers.CORPOR, ModModelLayers.CORPOR_ARMOR);
@@ -36,7 +36,7 @@ public class CorporRenderer extends AbstractSkeletonRenderer<Corpor, SkeletonRen
     }
 
     @Override
-    public ResourceLocation getTextureLocation(SkeletonRenderState renderState) {
+    public Identifier getTextureLocation(SkeletonRenderState renderState) {
         return TEXTURE_LOCATION;
     }
 
